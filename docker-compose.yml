@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  testfordockercompose.server:
+    image: ${DOCKER_REGISTRY-}testfordockercomposeserver
+    build:
+      context: .
+      dockerfile: TestForDockerCompose/Server/Dockerfile
+    volumes:
+      - ./TestForDockerCompose/Client:/app/Client
